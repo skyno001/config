@@ -171,4 +171,9 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh release list --limit 100 --json tagName --jq '.[].tagName' | tail -n +4 | xargs -I {} sh -c 'if [ -n "{}" ]; then echo "Processing cleanup for: {}"; gh release delete "{}" --cleanup-tag --yes; fi'
+        gh release list --limit 100 --json tagName --jq '.[].tagName' | tail -n +4 | while read -r tag; do
+          if [ -n "$tag" ]; then
+            echo "Processing cleanup for: $tag"
+            gh release delete "$tag" --cleanup-tag --yes
+          fi
+        done
