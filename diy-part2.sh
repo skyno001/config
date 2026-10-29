@@ -20,7 +20,7 @@ rm -f package/network/config/firewall4/patches/005-notrack-lan-ssdp-discovery.pa
 rm -f package/network/config/firewall4/patches/006-notrack-lan-wsd-discovery.patch
 
 # Modify firewall
-sed -i '118,131s/^/#/' package/network/config/firewall/files/firewall.config
+#sed -i '118,131s/^/#/' package/network/config/firewall/files/firewall.config
 
 # Modify hostname
 sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
