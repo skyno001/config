@@ -18,7 +18,6 @@ sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generat
 
 rm -f package/network/config/firewall4/patches/005-notrack-lan-ssdp-discovery.patch
 rm -f package/network/config/firewall4/patches/006-notrack-lan-wsd-discovery.patch
-chmod +x files/etc/uci-defaults/99-disable-ipsec
 
 # Modify firewall
 #sed -i '118,131s/^/#/' package/network/config/firewall/files/firewall.config
