@@ -1,0 +1,9 @@
+bash
+#!/bin/sh
+
+uci -q delete firewall.Allow-IPSec-ESP
+uci -q delete firewall.Allow-ISAKMP
+
+uci commit firewall
+
+exit 0
