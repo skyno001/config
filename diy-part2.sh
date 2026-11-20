@@ -18,8 +18,8 @@ sed -i 's|V4UetPzk\$CYXluq4wUazHjmCDBCqXF\.|V4UetPzk\$tx9UhzAOyTGg2fwdqJqU21|g' 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
-rm -f package/network/config/firewall4/patches/005-notrack-lan-ssdp-discovery.patch
-rm -f package/network/config/firewall4/patches/006-notrack-lan-wsd-discovery.patch
+#rm -f package/network/config/firewall4/patches/005-notrack-lan-ssdp-discovery.patch
+#rm -f package/network/config/firewall4/patches/006-notrack-lan-wsd-discovery.patch
 
 # Modify firewall
 #sed -i '118,131s/^/#/' package/network/config/firewall/files/firewall.config
